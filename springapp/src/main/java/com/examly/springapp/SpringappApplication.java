@@ -1,45 +1,50 @@
 package com.examly.springapp;
 
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.cfg.Configuration;
+// import org.hibernate.Session;
+// import org.hibernate.SessionFactory;
+// import org.hibernate.cfg.Configuration;
 
-import javax.persistence.criteria.CriteriaBuilder;
-import javax.persistence.criteria.CriteriaQuery;
-import javax.persistence.criteria.Root;
-import java.util.List;
+// import javax.persistence.criteria.CriteriaBuilder;
+// import javax.persistence.criteria.CriteriaQuery;
+// import javax.persistence.criteria.Root;
+// import java.util.List;
 
-import com.examly.springapp.model.Employee;
+// import com.examly.springapp.model.Employee;
+
+
+import java.util.*;
 
 public class SpringappApplication {
 
     public static void main(String[] args) {
-        Configuration configuration = new Configuration().configure();
-        SessionFactory sessionFactory = configuration.buildSessionFactory();
+        // Configuration configuration = new Configuration().configure();
+        // SessionFactory sessionFactory = configuration.buildSessionFactory();
 
-        try (Session session = sessionFactory.openSession()) {
-            // Add some sample employee records
-            addSampleEmployees(session);
+        // try (Session session = sessionFactory.openSession()) {
+        //     // Add some sample employee records
+        //     addSampleEmployees(session);
 
-            CriteriaBuilder criteriaBuilder = session.getCriteriaBuilder();
-            CriteriaQuery<Employee> criteriaQuery = criteriaBuilder.createQuery(Employee.class);
-            Root<Employee> root = criteriaQuery.from(Employee.class);
+        //     CriteriaBuilder criteriaBuilder = session.getCriteriaBuilder();
+        //     CriteriaQuery<Employee> criteriaQuery = criteriaBuilder.createQuery(Employee.class);
+        //     Root<Employee> root = criteriaQuery.from(Employee.class);
 
-            criteriaQuery.select(root)
-                    .where(criteriaBuilder.gt(root.get("salary"), 3000.0));
+        //     criteriaQuery.select(root)
+        //             .where(criteriaBuilder.gt(root.get("salary"), 3000.0));
 
-            List<Employee> employees = session.createQuery(criteriaQuery).getResultList();
+        //     List<Employee> employees = session.createQuery(criteriaQuery).getResultList();
 
-            System.out.println("Employees with salary greater than 3000:");
-            for (Employee employee : employees) {
-                System.out.println("ID: " + employee.getId() + ", Name: " + employee.getName() + ", Salary: "
-                        + employee.getSalary());
-            }
-        } catch (Exception e) {
-            System.out.println("Error: " + e.getMessage());
-        }
+        //     System.out.println("Employees with salary greater than 3000:");
+        //     for (Employee employee : employees) {
+        //         System.out.println("ID: " + employee.getId() + ", Name: " + employee.getName() + ", Salary: "
+        //                 + employee.getSalary());
+        //     }
+        // } catch (Exception e) {
+        //     System.out.println("Error: " + e.getMessage());
+        // }
 
-        sessionFactory.close();
+        // sessionFactory.close();
+
+        System.out.print("hello world");
     }
 
     private static void addSampleEmployees(Session session) {
