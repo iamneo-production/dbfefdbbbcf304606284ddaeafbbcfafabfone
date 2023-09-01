@@ -13,6 +13,7 @@ package com.examly.springapp;
 
 
 import java.util.*;
+import java.io.*;
 
 public class SpringappApplication {
 
@@ -46,18 +47,19 @@ public class SpringappApplication {
 
         System.out.print("hello world");
     }
-
-    private static void addSampleEmployees(Session session) {
-        session.beginTransaction();
-
-        Employee employee1 = new Employee(1001, "John Doe", 3500.0);
-        Employee employee2 = new Employee(1002, "Jane Smith", 2800.0);
-        Employee employee3 = new Employee(1003, "Alice Johnson", 4000.0);
-
-        session.save(employee1);
-        session.save(employee2);
-        session.save(employee3);
-
-        session.getTransaction().commit();
-    }
 }
+
+//     private static void addSampleEmployees(Session session) {
+//         session.beginTransaction();
+
+//         Employee employee1 = new Employee(1001, "John Doe", 3500.0);
+//         Employee employee2 = new Employee(1002, "Jane Smith", 2800.0);
+//         Employee employee3 = new Employee(1003, "Alice Johnson", 4000.0);
+
+//         session.save(employee1);
+//         session.save(employee2);
+//         session.save(employee3);
+
+//         session.getTransaction().commit();
+//     }
+// }

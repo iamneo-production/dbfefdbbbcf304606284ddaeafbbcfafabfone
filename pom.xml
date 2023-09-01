@@ -1,35 +1,45 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-    <groupId>com.houari</groupId>
-    <artifactId>iamneo-production_dbfefdbbbcf304606284ddaeafbbcfafabfone</artifactId>
-    <version>1.0-SNAPSHOT</version>
-    <properties>
-        <maven.compiler.source>8</maven.compiler.source>
-        <maven.compiler.target>8</maven.compiler.target>
-        <sonar.organization>iamneo-production</sonar.organization>
-        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
-        <sonar.sources>springapp/src/main</sonar.sources>
-        <sonar.tests>springapp/src/test</sonar.tests>
-        <sonar.java.binaries>target</sonar.java.binaries>
-    </properties>
-    <dependencies>
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-api</artifactId>
-            <version>5.7.0</version>
-            <scope>test</scope>
-        </dependency>
-    </dependencies>
-    <build>
-        <pluginManagement>
-            <plugins>
-                <plugin>
-                    <groupId>org.sonarsource.scanner.maven</groupId>
-                    <artifactId>sonar-maven-plugin</artifactId>
-                    <version>3.7.0.1746</version>
-                </plugin>
-            </plugins>
-        </pluginManagement>
-    </build>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.example</groupId>
+  <artifactId>my-java-project</artifactId>
+  <version>1.0-SNAPSHOT</version>
+
+  <!-- Dependencies Section -->
+  <dependencies>
+    <!-- Add your project dependencies here -->
+    <!-- Example: -->
+    <!-- MySQL Connector -->
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>8.0.28</version> <!-- Adjust version as needed -->
+    </dependency>
+    <!-- Spring Framework -->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-core</artifactId>
+      <version>5.3.14</version> <!-- Adjust version as needed -->
+    </dependency>
+    <!-- ... add more dependencies as required ... -->
+  </dependencies>
+
+  <!-- Build Section -->
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.8.1</version> <!-- Adjust version as needed -->
+
+        <!-- Compiler Configuration -->
+        <configuration>
+          <source>1.8</source> <!-- Set your Java source version -->
+          <target>1.8</target> <!-- Set your Java target version -->
+          <encoding>UTF-8</encoding> <!-- Set your source file encoding -->
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
 </project>
